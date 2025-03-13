@@ -61,8 +61,8 @@ colnames(woa_frame) <- woa_colnames
 # P7 What is the mean water temperature globally in the twilight zone (200-1000m
 # depth)?
 
-depths[27]
-depths[49]
+#depths[27]
+#depths[49]
 woa_wide <- read.csv("woa.csv", skip = 1)
 woa_twilight <- woa_wide[ , 27:49]
 sum_woa_twilight <- sum(woa_twilight, na.rm = TRUE)
