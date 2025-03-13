@@ -28,7 +28,7 @@ read.csv("woa.csv")
 
 # P4 Re-write the call to read.csv() to avoid the error in P3.
 read.table("woa.csv", header = FALSE)
-read.csv("woa.csv", skip = 1)
+woa_frame <- read.csv("woa.csv", skip = 1)
 
 
 # Fix the column names ----------------------------------------------------
@@ -49,8 +49,12 @@ depths
 # Make them the column names of your WOA data frame.
 
 woa_colnames <- c("Latitude", "Longitude", paste0("Depth ", depths))
-paste0("Depth ", depths)
-?paste
+#paste0("Depth ", depths)
+#?paste
+
+colnames(woa_frame) <- woa_colnames
+
+#View(woa_frame)
 
 # Analyzing wide-format data ----------------------------------------------
 
